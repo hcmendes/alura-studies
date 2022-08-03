@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.54.0"
+    "sass": "^1.54.0",
+    "typescript-css-modules": "^1.0.4"
   }
 }

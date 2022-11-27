@@ -25,17 +25,13 @@ function App() {
     },
   ]);
 
-  function selectTask(task: ITarefa) {
-    setSelected(task);
-    console.log({
-      task: { ...task },
-      selected
-    })
+  function selectTask(selectedTask: ITarefa) {
+    setSelected(selectedTask);
     setTarefas(old => 
       old.map(task => 
         ({
           ...task,
-          selecionado: task.id === selected?.id ? true : false
+          selecionado: task.id === selectedTask?.id ? true : false
         })
       ));
   }

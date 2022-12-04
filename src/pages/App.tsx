@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { ITarefa } from '../types/tarefa';
 
 function App() {
-  const [selected, setSelected] = useState<ITarefa>();
+  const [selecionado, setSelected] = useState<ITarefa>();
   const [tarefas, setTarefas] = useState<ITarefa[]>([
     {
       id: '1',
@@ -41,7 +41,7 @@ function App() {
       <Formulario setTarefas={setTarefas} />
       <Lista tarefas={tarefas}
         selectTask={selectTask} />
-      <Cronometro />
+      <Cronometro selecionado={selecionado} />
     </div>
   );
 }
